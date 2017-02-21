@@ -31,6 +31,32 @@ limitations under the License.
       data-site="ampproject.org">
   </amp-ad>
 ```
+### A/B testing
+```html
+  <amp-ad width="300" height="250"
+      type="sortable"
+      data-name="medrec"
+      data-site="ampproject.org"
+      data-ab-type="doubleclick"
+      data-ab-pct="50"
+      data-slot="/1966186/Pub_ampproject.org_300x250">
+    <div placeholder></div>
+    <div fallback></div>
+  </amp-ad>
+
+  <amp-ad width="300" height="250"
+      type="sortable"
+      data-name="medrec"
+      data-site="ampproject.org"
+      data-ab-type="adsense"
+      data-ab-pct="50"
+      data-ad-client="ca-pub-3693684048097240"
+      data-ad-slot="3616725052"
+      data-ad-format="auto">
+    <div placeholder></div>
+    <div fallback></div>
+  </amp-ad>
+```
 
 ## Configuration
 
@@ -44,5 +70,10 @@ __Required:__
 
 `type` - always set to "sortable"
  
+__Optional:__
+
+`data-ab-type` - for A/B testing Sortable against other services. Either 'adsense' or 'doubleclick'.
+`data-ab-pct` - percent likelihood that the alternate tags will be run instead of Sortable's.
 
 No explicit configuration is needed for a given sortable amp-ad, though each site must be set up beforehand with [Sortable](http://sortable.com). The site name `ampproject.org` can be used for testing. Note that only the two examples above will show an ad properly.
+for A/B testing, ad slots must have attributes compliant with the services that are being tested against Sortable. See the examples above.

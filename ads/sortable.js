@@ -25,12 +25,13 @@ import {adsense} from './google/adsense';
 export function sortable(global, data) {
   /**
    * For A/B testing our tags against doubleclick or adsense in AMP ads.
+   * See https://github.com/ampproject/amphtml/blob/master/ads/sortable.md for examples.
    */
-  if(data.ab && data.ab === 'doubleclick' && data.ab_pct && Math.random()*100 < data.ab_pct) {
+  if(data.abType && data.abType === 'doubleclick' && data.abPct && Math.random()*100 < data.abPct) {
     doubleclick(global, data);
     return;
   } 
-  if(data.ab && data.ab === 'adsense' && data.ab_pct && Math.random()*100 < data.ab_pct) {
+  if(data.abType && data.abType === 'adsense' && data.abPct && Math.random()*100 < data.abPct) {
     adsense(global, data);
     return;
   } 
