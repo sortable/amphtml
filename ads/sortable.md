@@ -40,8 +40,6 @@ limitations under the License.
       data-ab-type="doubleclick"
       data-ab-pct="50"
       data-slot="/1966186/Pub_ampproject.org_300x250">
-    <div placeholder></div>
-    <div fallback></div>
   </amp-ad>
 
   <amp-ad width="300" height="250"
@@ -53,8 +51,6 @@ limitations under the License.
       data-ad-client="ca-pub-3693684048097240"
       data-ad-slot="3616725052"
       data-ad-format="auto">
-    <div placeholder></div>
-    <div fallback></div>
   </amp-ad>
 ```
 
